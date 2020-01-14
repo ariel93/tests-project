@@ -10,26 +10,20 @@ def BMInum(weight,height):
 
 # the function return the BMI solution by the BMI  number
 def BMIsolution(BMI_number):
-    if BMI_number<15 :
-        return "Very severely underweight"
-    if BMI_number>=15 and BMI_number<16 :
-        return "severely underweight"
-    if BMI_number>=16 and BMI_number<18.5 :
-        return "Underweight"
-    if BMI_number>=18.5 and BMI_number<25 :
-        return "Normal (healthy weight)"
-    if BMI_number>=25 and BMI_number<30 :
-        return "Overweight"
-    if BMI_number>=30 and BMI_number<35 :
-        return "Obese Class I (Moderately obese)"
-    if BMI_number>=35 and BMI_number<40 :
-        return "Obese Class II (Severely obese)"
-    if BMI_number>=40 and BMI_number<45 :
-        return "Obese Class III (Very severely obese)"
-    if BMI_number>=45 and BMI_number<50 :
-        return "Obese Class IV (Morbidly obese)"                  				
-    if BMI_number>=50 and BMI_number<60 :
-        return "Obese Class V (Super obese)"  
-    if BMI_number>=60 :
-        return "Obese Class VI (Hyper obese)"      
-	
+    BMIdictionary={
+            15: 'Very severely underweight',
+            16: 'severely underweight',
+            18.5: 'Underweight',
+            25: 'Normal (healthy weight)',
+            30: 'Overweight',
+            35: 'Obese Class I (Moderately obese)',
+            40: 'Obese Class II (Severely obese)',
+            45: 'Obese Class III (Very severely obese)',
+            50: 'Obese Class IV (Morbidly obese)' ,                 				
+            60: 'Obese Class V (Super obese)',  
+            61: 'Obese Class VI (Hyper obese)' 
+    }
+    for status in BMIdictionary:
+        if BMI_number <  status:
+            return BMIdictionary[status]
+    return BMIdictionary[61]
