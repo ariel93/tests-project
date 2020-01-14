@@ -10,8 +10,8 @@ class TestBMI(unittest.TestCase):
         ws2 = 87
         ws3 = 90
         ws4 = 54
-        ws5 = 53
-        ws6 = 20
+        ws5 = 93
+        ws6 = 120
 
         # height stubs 
         hs1 = 0
@@ -27,20 +27,19 @@ class TestBMI(unittest.TestCase):
         result3 = bmi.BMInum(ws3,hs4)
         result4 = bmi.BMInum(ws4,hs5)
         result5 = bmi.BMInum(ws5,hs2)
-        result6 = bmi.BMInum(ws6,hs1)
+        result6 = bmi.BMInum(ws6,hs2)
         result7 = bmi.BMInum(ws5,hs3)
         result8 = bmi.BMInum(ws4,hs5)
 
         # tests
         self.assertEqual(result1,'ZeroDivisionError') 
-        self.assertEqual(result2,5) 
-        self.assertEqual(result2,3)
-        self.assertEqual(result3,1)
-        self.assertEqual(result4,2)
-        self.assertEqual(result5,3)
-        self.assertEqual(result6,4)
-        self.assertEqual(result7,5)
-        self.assertEqual(result8,6)
+        self.assertEqual(result2,24.099722991689752) 
+        self.assertEqual(result3,22.50)
+        self.assertEqual(result4,19.834710743801654)
+        self.assertEqual(result5,28.703703703703702)
+        self.assertEqual(result6,37.03703703703704)
+        self.assertEqual(result7,25.761772853185597)
+        self.assertEqual(result8,19.834710743801654)
 
 
 
@@ -114,7 +113,7 @@ class TestBMIsol(unittest.TestCase):
         self.assertEqual(exp9, result9)
         self.assertEqual(exp10, result10)
         self.assertEqual(exp11, result11)
-        self.assertEqual(exp12, result12)
+        self.assertEqual(exp11, result12)
 
 if __name__ == '__main__':
     unittest.main()
