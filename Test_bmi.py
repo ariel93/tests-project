@@ -6,7 +6,7 @@ class TestBMI(unittest.TestCase):
     def testBMInum(self):
 
         # weight stubs 
-        ws1 = 80
+        ws1 = 100
         ws2 = 87
         ws3 = 90
         ws4 = 54
@@ -14,7 +14,7 @@ class TestBMI(unittest.TestCase):
         ws6 = 20
 
         # height stubs 
-        hs1 = 1.7
+        hs1 = 0
         hs2 = 1.8
         hs3 = 1.9
         hs4 = 2
@@ -32,7 +32,8 @@ class TestBMI(unittest.TestCase):
         result8 = bmi.BMInum(ws4,hs5)
 
         # tests
-        self.assertEqual(result1,5) 
+        self.assertEqual(result1,'ZeroDivisionError') 
+        self.assertEqual(result2,5) 
         self.assertEqual(result2,3)
         self.assertEqual(result3,1)
         self.assertEqual(result4,2)
@@ -53,11 +54,7 @@ class TestBMI(unittest.TestCase):
 
 class TestBMIsol(unittest.TestCase):
     def testBMIsol(self):
-            self.assertEqual(BMIsolution(8),None)   
-
-
-
-
+           
 
         #bmi number stubs
         stub1=13
@@ -106,19 +103,19 @@ class TestBMIsol(unittest.TestCase):
 
 
         # test
-        self.assertEqual(expected1, result1)
-        self.assertEqual(expected2, result2)
-        self.assertEqual(expected3, result3)
-        self.assertEqual(expected4, result4)
-        self.assertEqual(expected5, result5)
-        self.assertEqual(expected6, result6)
-        self.assertEqual(expected7, result7)
-        self.assertEqual(expected8, result8)
-        self.assertEqual(expected9, result9)
-        self.assertEqual(expected10, result10)
-        self.assertEqual(expected11, result11)
-        self.assertEqual(expected12, result12)
-        
+        self.assertEqual(exp1, result1)
+        self.assertEqual(exp2, result2)
+        self.assertEqual(exp3, result3)
+        self.assertEqual(exp4, result4)
+        self.assertEqual(exp5, result5)
+        self.assertEqual(exp6, result6)
+        self.assertEqual(exp7, result7)
+        self.assertEqual(exp8, result8)
+        self.assertEqual(exp9, result9)
+        self.assertEqual(exp10, result10)
+        self.assertEqual(exp11, result11)
+        self.assertEqual(exp12, result12)
+
 if __name__ == '__main__':
     unittest.main()
     

@@ -1,8 +1,13 @@
-import Test_bmi
+
 
 # the function get weight (kg) and height(m) and return the BMI number
 def BMInum(weight,height):
-    return weight/height**2
+    if height == 0.0:
+        return 'ZeroDivisionError'
+    else:
+        return weight/height**2
+
+
 # the function return the BMI solution by the BMI  number
 def BMIsolution(BMI_number):
     if BMI_number<15 :
