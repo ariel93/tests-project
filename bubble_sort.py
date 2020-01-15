@@ -1,4 +1,7 @@
 def bubbleSort(arr):
+    if arr is None:
+        raise TypeError("Only not None values")
+
     n = len(arr)
 
     # Traverse through all array elements
