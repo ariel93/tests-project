@@ -1,4 +1,4 @@
-def bubbleSort(arr):
+def bubble_sort(arr):
     if arr is None:
         raise TypeError("Only not None values")
 
