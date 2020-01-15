@@ -1,5 +1,12 @@
-# the function get weight (kg) and height(m) and return the BMI number
+
 def BMInum(weight, height):
+    '''
+    This function will calculate the BMI - Body Mass Index.
+    it is a value derived from the mass (weight) and height of a person.
+    :param weight: The weight of a person in kg
+    :param height: The height of a person in m and cm
+    :return: the unit BMI that represent the weight divided by height pow by 2
+    '''
     if height == 0.0:
         return 'ZeroDivisionError'
     else:
