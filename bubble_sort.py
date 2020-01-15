@@ -16,6 +16,6 @@ def bubble_sort(arr):
 
         return arr
     except TypeError:
-        print("Only not None values")
+        print("Type are not valid")
 
 
