@@ -57,4 +57,13 @@ class TestBubbleSort(unittest.TestCase):
         # action
         result = [0, 2, 3, 3, 4, 4, 4, 4, 5, 5, 6, 7, 9, 14]
         # test
-        self.assertEquals(result, bubble_sort.bubble_sort(element_array), "array of integers")
+        self.assertEqual(result, bubble_sort.bubble_sort(element_array), "array of integers")
+
+    def test_sort_letters(self):
+        # stubs
+        element_array = ['x', 't', 'b', 'a', 'd', 'c', ]
+
+        # action
+        result = ['a', 'b', 'c', 'd', 't', 'x']
+        # test
+        self.assertEqual(result, bubble_sort.bubble_sort(element_array), "array of letters")
