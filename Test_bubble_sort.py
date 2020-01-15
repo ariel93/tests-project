@@ -38,9 +38,8 @@ class TestBubbleSort(unittest.TestCase):
         element_array = None
 
         # action
-
         # test
-        self.assertRaises()
+        self.assertRaises(TypeError, bubble_sort.bubble_sort(element_array))
 
     def test_empty_obj(self):
         # stubs
@@ -50,3 +49,12 @@ class TestBubbleSort(unittest.TestCase):
 
         # test
         self.assertIsNone(bubble_sort.bubble_sort(element_array), "Parameter for function is None")
+
+    def test_for_loss_values(self):
+        # stubs
+        element_array = [9, 4, 3, 2, 5, 6, 14, 0, 4, 3, 5, 7, 4, 4, ]
+
+        # action
+        result = [0, 2, 3, 3, 4, 4, 4, 4, 5, 5, 6, 7, 9, 14]
+        # test
+        self.assertEquals(result, bubble_sort.bubble_sort(element_array), "array of integers")
